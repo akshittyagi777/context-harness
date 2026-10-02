@@ -1,0 +1,47 @@
+=== SYSTEM ===
+You are a research assistant for one scientist in a protein-biochemistry lab. Ground every claim in the context below; if the context does not support a claim, do not make it. Be direct and brief, no lectures. Never recommend a protocol that conflicts with a pinned constraint. If a PLAN AMBIGUITY note is present, name the change and ask which plan is live rather than assuming. Respond in under 180 words.
+
+=== USER ===
+## Pinned constraints
+- Construct v1 has an aggregation-prone loop (residues 140-160); it aggregates when induced above 25°C.
+- Do not suggest protocols that use acrylamide monomer, DMF or β-mercaptoethanol; prefer precast gels and TCEP.
+
+## Unresolved tensions (must address)
+PLAN AMBIGUITY. On 2026-09-26 the user replaced 'Express construct v1 in BL21 at 37°C, 1 mM IPTG, 4 h induction' with 'Revised plan: 18°C overnight induction, 0.2 mM IPTG. Stop using 37°C for construct v1'. Today's message uses words from the old plan (37, induction). Do not assume either plan; name the change and ask which plan is live now.
+
+## Current plans and preferences
+Current plan:
+- Revised plan: 18°C overnight induction, 0.2 mM IPTG. Stop using 37°C for construct v1. (stated 2026-09-26)
+Preferences:
+- Wants accountability on making fresh DTT daily.
+- Prefers short, direct answers; no long protocol dumps.
+
+## How to read the data
+- concentration:2026-09-24: the instrument read 0.6 mg/mL on 2026-09-24, but the user's statement said about 2 mg/mL; the measurement stands and the statement is kept as what was recorded
+- run:2026-09-26: the 21:30 statement overrides the 09:00 one for the same run; 2026-09-26 is left out of the yield trend
+
+## Measurements
+Concentration averaged 0.99 mg/mL over 2026-09-20 to 2026-09-24 and 0.49 mg/mL over 2026-09-24 to 2026-09-28. Latest A260/280 is 1.27 on 2026-09-28 (clean limit 0.7). Shaker was off setpoint by more than 2°C on 2026-09-28. Yield went from 3.8 to 1.2 mg/L across 3 preps (2026-09-22 to 2026-09-27, leaving out 2026-09-26); typical is 4.0 mg/L.
+Raw rows:
+date  mg/mL  A260/280  set_C  actual_C
+09-24  0.60  0.75  37  37.1
+09-25  0.52  0.90  37  36.8
+09-26  0.47  1.05  37  37.3
+09-27  0.44  1.18  18  18.3
+09-28  0.41  1.27  18  21.6
+
+## Relevant records
+- (episode, 2026-09-26) SEC showed a large void-volume peak; v1 prep aggregated.
+- (fact, 2026-08-18) Core facility note: the shared shaker in room 314 runs 3 to 4°C hot when the setpoint is above 30°C.
+
+## Conversation history
+[09-26 09:00] user: SEC run looks clean.
+[09-26 21:30] user: Actually the SEC trace had a huge void-volume peak, it's aggregated. Switching to 18°C overnight induction with 0.2 mM IPTG. Also keep me honest on making fresh DTT, I keep using old stock.
+[09-28 20:00] user: Started the 18°C culture. Used the DTT from Thursday though, oops.
+Earlier sessions (summaries):
+- S1 09-19: Planned construct v1 expression in BL21; asked not to be reminded about buffer prep.
+- S2 09-22: First prep completed; reported a strong gel band.
+- S3 09-24: Reported a good A280 reading from the notebook.
+
+## Incoming message
+[2026-09-29T08:10] Gel looks rough again. Thinking I'll just push through a 37°C induction on the 2 L prep tomorrow to get enough protein for the trays. Thoughts?

@@ -1,0 +1,4 @@
+# health domain: encrypted EHR vault
+cryptography>=42
+# live model calls, either domain (only providers/anthropic.py imports it)
+anthropic>=1.0

@@ -1,0 +1,28 @@
+__pycache__/
+*.pyc
+.venv/
+.DS_Store
+runs/
+mock_exports/
+data/
+exports/
+*.fernet
+*.ndjson
+
+# secrets and tokens
+.env
+.env.*
+*token*.json
+
+# health data: never committed, whatever the data dir is called
+*.salt
+*.log
+traces/
+memory.json
+history.json
+wearables.json
+imports.json
+regimes.json
+*.zip
+*.xml
+*.XML

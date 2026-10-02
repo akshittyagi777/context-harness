@@ -1,0 +1,10 @@
+[project]
+name = "context-harness"
+version = "0.2.0"
+description = "A small, traced harness around a language-model call, with a lab domain and a health domain"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+live = ["anthropic>=1.0"]
+health = ["cryptography>=42"]
